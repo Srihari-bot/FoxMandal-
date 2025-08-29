@@ -1,0 +1,28 @@
+# Core dependencies
+python-dotenv==1.0.0
+fastapi==0.115.13
+uvicorn==0.24.0
+requests==2.31.0
+
+# Database
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+
+# File processing
+PyMuPDF==1.26.1
+pytesseract==0.3.13
+Pillow==11.2.1
+opencv-python==4.11.0.86
+
+# Translation and text processing
+googletrans==4.0.0rc1
+pypandoc==1.15
+
+# Data processing
+pandas==2.1.4
+numpy>=1.26.0,<2.0.0
+
+# Development
+pytest==7.4.3
+black==23.11.0
+flake8==6.1.0 
