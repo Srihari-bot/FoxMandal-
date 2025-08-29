@@ -1,56 +1,109 @@
-# FOXMandal Frontend
+# FOXMandal
 
-This is the frontend application for FOXMandal built with React.
+A comprehensive document processing application with OCR, translation, and PDF processing capabilities.
 
-## Features
+## Project Structure
 
-- React-based user interface
-- File upload and processing
-- OCR functionality
-- Translation services
-- PDF processing
-- Image processing
+```
+FOXMandal/
+├── backend/          # FastAPI backend
+│   ├── main.py       # Main API application
+│   ├── app.py        # Additional app configuration
+│   ├── requirements.txt
+│   ├── config.env    # Environment variables
+│   └── README.md     # Backend documentation
+├── frontend/         # React frontend
+│   ├── App.jsx       # Main React component
+│   ├── App.css       # Styles
+│   ├── index.js      # Entry point
+│   ├── index.html    # HTML template
+│   ├── package.json  # Node.js dependencies
+│   └── README.md     # Frontend documentation
+├── venv/             # Python virtual environment
+└── README.md         # This file
+```
 
-## Setup
+## Quick Start
 
-1. **Install Node.js dependencies:**
+### Backend Setup
+
+1. **Navigate to backend directory:**
+   ```bash
+   cd backend
+   ```
+
+2. **Install Python dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Install Tesseract OCR:**
+   - Windows: Download from https://github.com/UB-Mannheim/tesseract/wiki
+   - Or use Chocolatey: `choco install tesseract`
+
+4. **Start the backend:**
+   ```bash
+   python main.py
+   ```
+
+The backend will be available at: http://localhost:8000
+
+### Frontend Setup
+
+1. **Navigate to frontend directory:**
+   ```bash
+   cd frontend
+   ```
+
+2. **Install Node.js dependencies:**
    ```bash
    npm install
    ```
 
-2. **Configure API endpoint:**
-   - The app is configured to proxy requests to `http://localhost:8000` (backend)
-   - Make sure the backend is running before starting the frontend
+3. **Start the frontend:**
+   ```bash
+   npm start
+   ```
 
-## Running the Frontend
+The frontend will be available at: http://localhost:3000
 
-```bash
-# Development with React Scripts
-npm start
+## Features
 
-# Or with Vite (faster development)
-npm run dev
-```
+- **OCR Processing**: Extract text from images and PDFs
+- **Translation**: Multi-language text translation
+- **PDF Processing**: Convert and process PDF documents
+- **Image Processing**: Advanced image manipulation
+- **File Upload**: Drag-and-drop file upload interface
+- **Real-time Processing**: Live feedback and progress tracking
 
-The application will be available at:
-- React Scripts: http://localhost:3000
-- Vite: http://localhost:5173
+## API Documentation
 
-## Building for Production
+Once the backend is running, visit:
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
 
-```bash
-# Build with React Scripts
-npm run build
+## Development
 
-# Or with Vite
-npm run build:vite
-```
+- Backend: FastAPI with Python
+- Frontend: React with modern JavaScript
+- Database: SQLAlchemy (if needed)
+- File Processing: PyMuPDF, Tesseract, OpenCV
 
-## Project Structure
+## Environment Variables
 
-- `App.jsx` - Main application component
-- `App.css` - Main styles
-- `index.js` - Application entry point
-- `index.css` - Global styles
-- `index.html` - HTML template
-- `*.png` - Application images and logos 
+Configure your environment variables in `backend/config.env`:
+- API keys
+- Database connections
+- External service configurations
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License. 
